@@ -1,0 +1,18 @@
+<div class="col" *ngIf="nombre && titulo && bio; else optionalContent">
+    <div class="card bg-light mb-3">
+        <div class="card-header">Tarjeta de presentación</div>
+        <div class="card-body">
+            <h5 class="card-title">Nombre: {{nombre}}</h5>
+            <p>Titulo: {{titulo}}</p>
+            <p>Bio: {{bio}}</p>
+        </div>
+    </div>
+</div>
+
+<ng-template #optionalContent>
+    <div class="col">
+        <div class="alert alert-danger" role="alert">
+            No se proporcionó ninguna información
+        </div>
+    </div>
+</ng-template>
